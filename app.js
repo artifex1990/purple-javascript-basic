@@ -1,18 +1,12 @@
-let a = 5;
-let b = 5.6;
-console.log(typeof a);
-console.log(typeof b);
+const ratePerHourUSD = 80;
+const orderHour = 40;
+const maxWorkHours = 5;
+const maxWorkDaysInWeekdays = 5;
+const DeadlineOnDay = 11 - 2;
 
-a = 'string';
-console.log(typeof a);
+const ratePerDay = ratePerHourUSD * maxWorkHours;
+const workDayOnOrder = orderHour / maxWorkHours;
+const costOrder = workDayOnOrder * ratePerDay;
 
-let isAdmin = a > 10;
-console.log(typeof isAdmin);
-
-let c;
-console.log(typeof c);
-c = 4;
-console.log(typeof c);
-
-let d = null;
-console.log(typeof d == null);
+console.log(`Цена работы: ${costOrder} $.`);
+console.log(`Успеем ли закончить проект: ${workDayOnOrder < DeadlineOnDay ? 'да' : 'нет'}`);
