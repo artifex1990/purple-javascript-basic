@@ -1,12 +1,16 @@
-const ratePerHourUSD = 80;
-const orderHour = 40;
-const maxWorkHours = 5;
-const maxWorkDaysInWeekdays = 5;
-const DeadlineOnDay = 11 - 2;
+const projectName = 'Сайт магазина';
+const price = 2000;
+const author = 'Василий Пупкин';
 
-const ratePerDay = ratePerHourUSD * maxWorkHours;
-const workDayOnOrder = orderHour / maxWorkHours;
-const costOrder = workDayOnOrder * ratePerDay;
+const template = author + ' заказал ' + projectName + ' по цене ' + price;
+console.log(template);
 
-console.log(`Цена работы: ${costOrder} $.`);
-console.log(`Успеем ли закончить проект: ${workDayOnOrder < DeadlineOnDay ? 'да' : 'нет'}`);
+const template2 = `${author} заказал ${projectName} по цене ${price}`;
+console.log(template2);
+
+const template3 = 'Проект \n' + 'Цена: ' + price + '$';
+console.log(template3);
+
+const template4 = `Проект
+Цена: ${price}$`;
+console.log(template4);
