@@ -1,14 +1,19 @@
+// Операторы присваивания
+let age = 18;
+age += 2;
+age -= 2;
+age *= 2;
+age /= 2;
 
-const width = 10;
-const height = 5;
-const space = width * height;
-const newWidth = width - 4;
-const newWidth2 = width + 4;
-const division = newWidth / newWidth2;
-const volume = 2 ** 3;
-console.log(volume);
+age++;
+age--;
 
+console.log(age);
 
-const city = 'Moscow';
-const street = 'Lenina';
-console.log(city + ', ' + street + ' ' + 5);
+// Операторы сравнения
+const vasya = 20;
+console.log(vasya > age);
+console.log(vasya >= age);
+console.log(vasya < age);
+console.log(vasya <= age);
+console.log(vasya == age);
