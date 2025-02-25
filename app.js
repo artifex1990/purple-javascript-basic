@@ -1,33 +1,9 @@
-const tasks = ['Задача 1'];
+const userData = ['Антон', 18, 'Москва'];
 
-function add(task) {
-    tasks.push(task);
+function getData() {
+    return ['Антон', 18, 'Москва'];
 }
 
-function remove(task) {
-    const index = tasks.indexOf(task);
+const [userName, _, city] = userData;
 
-    if (index === -1) {
-        return;
-    }
-
-    return tasks.splice(index, 1);
-}
-
-function prioritize(task) {
-    const result = remove(tasks);
-
-    if (!result) {
-       return;
-    }
-
-     tasks.unshift(result[0]);
-}
-
-add('Задача 2');
-add('Задача 3');
-console.log(tasks);
-remove('Задача 2');
-console.log(tasks);
-prioritize('Задача 3');
-console.log(tasks);
+console.log(userName, city);
