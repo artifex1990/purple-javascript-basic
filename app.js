@@ -1,16 +1,14 @@
-const deposit = 12_000;
-const rate = 0.07;
-const percentPerMonth = rate / 12;
-const depositTermsPerMonth = 24;
+const secretNumber = 7;
 
-const goal = 13_500;
+if (secretNumber === 7) {
+    console.log('Угадал строго!');
+}
 
-const res = deposit * (1 + percentPerMonth) ** depositTermsPerMonth;
+if (secretNumber === 7) {
+    console.log('Угадал не строго!');
+}
 
-console.log(res)
-
-if (res > goal) {
-    console.log(`You have reached your goal! ${res - goal}`);
-} else {
-    console.log('You have not reached your goal!');
+const q = prompt('Введите число');
+if (q === 7) {
+    console.log('!')
 }
