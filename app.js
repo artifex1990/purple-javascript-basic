@@ -1,12 +1,12 @@
-const balance = 1200;
-const bonusBalance = 90;
-const isBanned = false;
-const isExist = false;
-const isSelling = true;
+function logName(name, surname) {
+    console.log(`Моё имя ${name} ${surname}!`);
+}
 
-const canBy = (balance > 1000 || bonusBalance > 100) 
-    && !isBanned
-    && !isExist
-    && isSelling;
+logName('Pavel', 'Demyanov');
 
-console.log(`Могу купить игру: ${canBy ? 'Да' : 'Нет'}`);
+function countDepositSum(depositInUSD, month, rate) {
+    return depositInUSD * (1 + rate / 12) ** month;
+}
+
+console.log(countDepositSum(1000, 24, 0.12));
+console.log(countDepositSum(1000, 48, 0.1));
