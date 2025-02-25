@@ -1,9 +1,15 @@
-const arr = ['!', 'JS', 'люблю', 'Я'];
-const res = [];
+const tasks = [
+    [1, 'Задача 1'],
+    [2, 'Задача 2'],
+    [3, 'Задача 3'],
+    [4, 'Задача 4'],
+    [5, 'Задача 5'],
+    [6, 'Задача 6']
+];
 
 
-for (let i = arr.length - 1; 0 <= i; i--) {
-    res.push(arr[i]);
+for (let i = 0; i < tasks.length; i++) {
+    for (let j = 0; j < tasks[i].length; j++) {
+        console.log(tasks[i][j]);
+    }
 }
-
-console.log(res.join(' '));
