@@ -1,11 +1,16 @@
-const money = 100;
+const deposit = 12_000;
+const rate = 0.07;
+const percentPerMonth = rate / 12;
+const depositTermsPerMonth = 24;
 
-if (money > 50) {
-    console.log('Может купить наш продукт');
-} else if (money > 5) {
-    console.log('Может купить mini продукт');
+const goal = 13_500;
+
+const res = deposit * (1 + percentPerMonth) ** depositTermsPerMonth;
+
+console.log(res)
+
+if (res > goal) {
+    console.log(`You have reached your goal! ${res - goal}`);
 } else {
-    console.log('Не может купить наш продукт');
+    console.log('You have not reached your goal!');
 }
-
-console.log('Итого: ' + money);
