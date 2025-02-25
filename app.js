@@ -1,15 +1,31 @@
-const tasks = [
-    [1, 'Задача 1'],
-    [2, 'Задача 2'],
-    [3, 'Задача 3'],
-    [4, 'Задача 4'],
-    [5, 'Задача 5'],
-    [6, 'Задача 6']
-];
+// for (let i = 1; i < 5; i++) {
+//     console.log(`Вывод - ${i}`);
+// }
 
+// let i = 1;
+// while (i < 5) {
+//     console.log(`Вывод - ${i}`);
+//     i++;
+// }
 
-for (let i = 0; i < tasks.length; i++) {
-    for (let j = 0; j < tasks[i].length; j++) {
-        console.log(tasks[i][j]);
+const arr = [1, 4, 8, 7];
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 5) {
+        break;
     }
+
+    console.log(arr[i]);
 }
+
+let i = 0;
+while (arr[i] <= 5 && arr.length > i) {
+    console.log(arr[i]);
+    i++;
+}
+
+let j = 0;
+do {
+    console.log(arr[j]);
+    j++;
+} while(j < 0)
