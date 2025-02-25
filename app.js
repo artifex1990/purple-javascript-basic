@@ -1,10 +1,13 @@
-const res = prompt('Сколько будет 7 + или - 15?');
-switch (true) {
-    case res == 'Я не робот':
-    case Number(res) === 22:
-    case Number(res) === -8:
-        console.log('Успех');
-        break;
-    default:
-        console.log('Вы робот!');
-}
+const isAdmin = true;
+const canWrite = true;
+
+console.log(`Системный файл ${isAdmin && canWrite}`);
+console.log(`Обычный файл ${isAdmin || canWrite}`);
+console.log(`Инвертируем права админа ${!isAdmin}`);
+
+const isEdited = true;
+const isSuperAdmin = true;
+
+console.log(`Системный файл с редактированием ${
+    isAdmin && canWrite && (!isEdited || isSuperAdmin)
+}`);
