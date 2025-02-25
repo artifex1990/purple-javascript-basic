@@ -1,12 +1,11 @@
-function logName(name, surname) {
-    console.log(`Моё имя ${name} ${surname}!`);
+function powerOfTwo(num) {
+    return num * num;
 }
 
-logName('Pavel', 'Demyanov');
+console.log(powerOfTwo(5));
 
-function countDepositSum(depositInUSD, month, rate) {
-    return depositInUSD * (1 + rate / 12) ** month;
+const poft = function (num) { 
+    return num * num; 
 }
 
-console.log(countDepositSum(1000, 24, 0.12));
-console.log(countDepositSum(1000, 48, 0.1));
+console.log(poft(6));
