@@ -11,19 +11,17 @@ function remove(task) {
         return;
     }
 
-    tasks.splice(index, 1);
+    return tasks.splice(index, 1);
 }
 
 function prioritize(task) {
-    const index = tasks.indexOf(task);
+    const result = remove(tasks);
 
-    if (index === -1) {
-        return;
+    if (!result) {
+       return;
     }
 
-    const oldTask = tasks[index];
-    tasks.splice(index, 1);
-    tasks.unshift(oldTask);
+     tasks.unshift(result[0]);
 }
 
 add('Задача 2');
