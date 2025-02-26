@@ -1,15 +1,5 @@
-const operations = [100, -20, 7, -30, 50];
+const arr = [2, 4, 4, 10];
 
-let balance = 0;
-for (const operation of operations) {
-    balance += operation;
-}
-
-console.log(balance);
-
-const finalBalance = operations.reduce((acc, operation) => acc + operation, 0);
-console.log(finalBalance);
-
-
-const minOperation = operations.reduce((acc, operation) => acc > operation ? operation : acc);
-console.log(minOperation);
+const avg = arr
+    .reduce((acc, el, i) => i !== arr.length - 1 ? acc + el : (acc + el) / arr.length, 0);
+console.log(avg);
