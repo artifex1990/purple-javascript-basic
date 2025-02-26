@@ -1,13 +1,7 @@
-const operations = [100, -20, 7, -20, 50];
+const prices = [[100, 200], [120, 100], [200, 350]];
 
-const positiveOperations = operations
-    .filter(operation => operation > 0);
-
-console.log(operations);
-console.log(positiveOperations);
-
-const positiveRUBOperations = operations
-    .filter(operation => operation > 0)
-    .map(operation => operation * 60);
-
-console.log(positiveRUBOperations);
+const result = prices
+    .map(product => product[1] - product[0]).
+    filter(price => price > 0);
+    
+console.log(result);
