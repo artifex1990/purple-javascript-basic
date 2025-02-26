@@ -1,7 +1,10 @@
-const arr = [2, 4, 4, 10];
+const arr = [2, 4, 4, 10, 20];
 
-const elGT5 = arr.find(el => el > 5);
-console.log(elGT5);
+function some (arr, search) {
+    const res = arr.find(el => el === search);
 
-const elGT5Index = arr.findIndex(el => el < 0);
-console.log(elGT5Index);
+    return !!res;
+}
+
+console.log(some(arr, 4));
+console.log(arr.some(el => el === 4));
