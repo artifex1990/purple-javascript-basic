@@ -1,10 +1,7 @@
-const arr = [2, 4, 4, 10, 20];
+const arr = [[2, 4], [4, 10], [20, [40, 50]]];
 
-function some (arr, search) {
-    const res = arr.find(el => el === search);
+const res = arr.flat(2);
+console.log(res);
 
-    return !!res;
-}
-
-console.log(some(arr, 4));
-console.log(arr.some(el => el === 4));
+const res2 = arr.flatMap(el => el.concat([1]));
+console.log(res2);
