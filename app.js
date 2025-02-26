@@ -1,7 +1,13 @@
-const transactionInUSD = [10, -7, 50, -10, 100];
+const operations = [100, -20, 7, -20, 50];
 
-const transactionInRUB = transactionInUSD
-    .map((transaction) => transaction * 60);
+const positiveOperations = operations
+    .filter(operation => operation > 0);
 
-console.log(transactionInUSD);
-console.log(transactionInRUB);
+console.log(operations);
+console.log(positiveOperations);
+
+const positiveRUBOperations = operations
+    .filter(operation => operation > 0)
+    .map(operation => operation * 60);
+
+console.log(positiveRUBOperations);
