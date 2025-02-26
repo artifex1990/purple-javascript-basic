@@ -1,7 +1,12 @@
-const arr = [[2, 4], [4, 10], [20, [40, 50]]];
+const users = ['Вася', 'Петя', 'Маша'];
+console.log(users);
+users.sort();
+console.log(users);
 
-const res = arr.flat(2);
-console.log(res);
+const operations = [100, -300, -100, 50, 480];
+console.log(operations);
+operations.sort((a, b) => a - b);
+console.log(operations);
 
-const res2 = arr.flatMap(el => el.concat([1]));
-console.log(res2);
+operations.sort((a, b) => b - a);
+console.log(operations);
