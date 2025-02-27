@@ -1,16 +1,24 @@
-const str = 'Вася Пупкин';
-console.log(str.includes('а'));
-console.log(str.startsWith('Вася'));
-console.log(str.endsWith('Пупкин'));
-console.log(new String('Вася Пупкин').includes('а'));
+function isPhoneNumber(num) {
+    let phone = num.trim();
+    phone = phone.replace('+7', '8');
 
-console.log(str.toLowerCase());
-console.log(str.toUpperCase());
-console.log(str.replace('Пупкин', 'Вася'));
-console.log(str.replaceAll('а', 'и'));
-console.log(str.replace(/а/g, 'и'));
+    if (!phone.startsWith('8')) {
+        return false;
+    }
 
-const str2 = ' Вася Пупкин  \n';
-console.log(str2.trim());
-console.log(str2.trimStart());
-console.log(str2.trimEnd());
+    phone = phone.replaceAll('(', '');
+    phone = phone.replaceAll(')', '');
+    phone = phone.replaceAll(' ', '');
+    phone = phone.replaceAll('-', '');
+
+    if (phone.length !== 11) {
+        return false;
+    }
+
+    return !isNaN(phone);
+}
+
+
+console.log(isPhoneNumber('8(999)999-99-99'));
+console.log(isPhoneNumber('+7(999)999-99-99'));
+console.log(isPhoneNumber('+7999999h999'));
