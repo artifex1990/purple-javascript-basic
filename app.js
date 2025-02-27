@@ -1,4 +1,8 @@
-const film = 'Звездные Воины';
-console.log(film.padStart(50, '*'));
-console.log(film.padEnd(50, '*'));
-console.log(film.repeat(10));
+const card = '2456213752319853';
+
+function hideCard(card) {
+    const viewNum = 4;
+    return card.slice(-viewNum).padStart(card.length, '*');
+}
+
+console.log(hideCard(card));
