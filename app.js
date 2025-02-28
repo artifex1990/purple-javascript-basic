@@ -3,7 +3,7 @@ const wallet = {
     operations: [],
     increase: function (sum, reason) {
         this.balance += sum;
-        this.operations.push({reason: reason, sum: sum});
+        this.operations.push({reason, sum});
 
         return true;
     },
@@ -14,7 +14,7 @@ const wallet = {
         }
 
         this.balance -= sum;
-        this.operations.push({reason: reason, sum: -sum});
+        this.operations.push({reason, sum: -sum});
 
         return true;
     },
