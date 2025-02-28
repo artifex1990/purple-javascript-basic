@@ -1,8 +1,14 @@
 const users = [
-    { name: 'Вася', age: 30 },
-    { name: 'Катя', age: 18 },
-    { name: 'Аня', age: 40 },
-    { name: 'Петя', age: 25 },
+    { name: 'Вася', age: 30 , surname: 'Пупкина', skills: ['coding', 'pentest', 'dating'] },
+    { name: 'Катя', age: 30 , surname: 'Васина', skills: ['hacking'] },
+    { name: 'Аня', age: 30 , surname: 'Шлепина', skills: ['coding', 'pentest'] },
+    { name: 'Петя', age: 30 , surname: 'Виноградов', skills: ['coding', 'pentest', 'dating'] },
 ];
 
-console.log(users.sort((a, b) => a.age - b.age));
+const userData = users.map(user => { 
+    return { 
+        fullName: user.name + ' ' + user.surname,
+        skillNum: user.skills.length 
+    };
+});
+console.log(userData);
