@@ -1,8 +1,12 @@
-const card = '2456213752319853';
+const userArray = ['Вася', 'Пупкин', 24];
 
-function hideCard(card) {
-    const viewNum = 4;
-    return card.slice(-viewNum).padStart(card.length, '*');
-}
-
-console.log(hideCard(card));
+const user = {
+    name: 'Вася',
+    surname: 'Пупкин',
+    age: 24,
+    skills: [
+        'Программирование',
+        'Готовка'
+    ],
+    1: 1
+};
