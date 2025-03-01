@@ -1,26 +1,17 @@
-const user = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 20,
-    getUserInfo: function () {
-        console.log(this);
-        console.log(`${this.firstName} ${this.lastName}`);
+'use strict';
 
-        const canDrink = () => {
-            if (this.age >= 18) {
-                console.log('Может пить');
-            } else {
-                console.log('Нельзя пить');
-            }
-        }
-
-        canDrink();
-    },
-    getUserInfoArrow: () => {
-        console.log(this);
-        console.log(`${this.firstName} ${this.lastName}`);
-    },
+function sum(num1, num2) {
+    console.log(this);
+    console.log(arguments);
+    return num1 + num2;
 }
 
-user.getUserInfo();
-//user.getUserInfoArrow();
+console.log(sum(5, 10));
+
+const sumArrow = (num1, num2) => {
+    console.log(this);
+    console.log(arguments);
+    return num1 + num2;
+}
+
+console.log(sumArrow(5, 10));
