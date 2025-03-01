@@ -1,17 +1,27 @@
 'use strict';
 
-function sum(num1, num2) {
-    console.log(this);
-    console.log(arguments);
-    return num1 + num2;
+const company = {
+    name: 'Company',
+    employees: [
+        {
+            name: 'Ivan',
+            getName: function () {
+                return this.name;
+            }
+        }
+    ],
+    ceo: {
+        name: 'Vasya',
+        getName: function () {
+            return this.name;
+        }
+    },
+    getNameCompany: function () {
+        return this.name;
+    },
 }
 
-console.log(sum(5, 10));
 
-const sumArrow = (num1, num2) => {
-    console.log(this);
-    console.log(arguments);
-    return num1 + num2;
-}
-
-console.log(sumArrow(5, 10));
+console.log(company.getNameCompany());
+console.log(company.ceo.getName());
+console.log(company.employees.map(employee => employee.getName()));
