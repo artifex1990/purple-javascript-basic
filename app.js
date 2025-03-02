@@ -1,18 +1,22 @@
 'use strict';
 
-const user = {
-  login: 'example@mail.com',
-  password: '12345'
-};
-
-function removePassword(reset) {
-  if (reset) {
-    this.password = undefined;
-  }
+function changeBalance() {
+    let balance = 0;
+    let key = 'asd';
+    return function (sum) {
+        balance += sum;
+        key = 'fadfa';
+        console.log(`Баланс: ${balance}`);
+    }
 }
 
-console.log(user);
+const change = changeBalance();
+change(100);
+change(-50);
+change(200);
+console.dir(change);
 
-const removePasswordUser = removePassword.bind(user, true);
-removePasswordUser();
-console.log(user);
+
+const change2 = changeBalance();
+change2(100);
+console.dir(change2);
