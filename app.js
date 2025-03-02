@@ -1,23 +1,18 @@
 'use strict';
 
-const audi = {
-    make: 'Audi',
-    model: 'A3',
-    damages: []
+const user = {
+  login: 'example@mail.com',
+  password: '12345'
 };
 
-const carManipulation = {
-    addDamage(part, rate) {
-        this.damages.push({ part, rate });
-        console.log(`Добавить повреждение на ${this.make} ${this.model}.`);
-    }
+function removePassword(reset) {
+  if (reset) {
+    this.password = undefined;
+  }
 }
 
-const addDamageAudi = carManipulation.addDamage.bind(audi);
-addDamageAudi('Кузов', 3);
-console.log(audi);
+console.log(user);
 
-
-const addDamageAudRoof = carManipulation.addDamage.bind(audi, 'Крыша');
-addDamageAudRoof(2);
-console.log(audi);
+const removePasswordUser = removePassword.bind(user, true);
+removePasswordUser();
+console.log(user);
