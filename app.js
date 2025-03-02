@@ -20,6 +20,8 @@ function submitForm() {
 
     document.querySelector('.panel').innerText = input;
     document.querySelector('.input').value = '';
+    //document.querySelector('.notification').classList.add('notification_active');
+    document.querySelector('.notification').classList.remove('notification_active');
 }
 
 function inputChanged(e) {
