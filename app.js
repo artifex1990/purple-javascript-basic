@@ -11,6 +11,12 @@
 //     document.querySelector('.input').value = '';
 // });
 
+function inputChanged(e) {
+    if (e.code === 'Enter') {
+        submitForm();
+    }
+}
+
 function submitForm() {
     const input = document.querySelector('.input').value;
 
@@ -29,8 +35,12 @@ function submitForm() {
     console.log(document.querySelector('.notification').getAttribute('user-id'));
 }
 
-function inputChanged(e) {
-    if (e.code === 'Enter') {
-        submitForm();
-    }
-}
+const panelText = 'Панель';
+const panelClass = 'button';
+const newElement = document.createElement('button');
+newElement.setAttribute('user-id', 1);
+newElement.classList.add('panel');
+// newElement.innerText = 'Кнопка';
+newElement.innerHTML = `<button class="${panelClass}">${panelText}</button>`;
+
+document.querySelector('.test').appendChild(newElement);
