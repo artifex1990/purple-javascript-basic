@@ -11,7 +11,7 @@
 //     document.querySelector('.input').value = '';
 // });
 
-function changeClick() {
+function submitForm() {
     const input = document.querySelector('.input').value;
 
     if (!input) {
@@ -20,4 +20,10 @@ function changeClick() {
 
     document.querySelector('.panel').innerText = input;
     document.querySelector('.input').value = '';
+}
+
+function inputChanged(e) {
+    if (e.code === 'Enter') {
+        submitForm();
+    }
 }
