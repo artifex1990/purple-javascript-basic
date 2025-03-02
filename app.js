@@ -21,7 +21,12 @@ function submitForm() {
     document.querySelector('.panel').innerText = input;
     document.querySelector('.input').value = '';
     //document.querySelector('.notification').classList.add('notification_active');
-    document.querySelector('.notification').classList.remove('notification_active');
+    //document.querySelector('.notification').classList.remove('notification_active');
+    console.log(document.querySelector('.notification').getAttribute('class'));
+    document.querySelector('.notification').setAttribute('class', 'notification');
+    document.querySelector('.notification').setAttribute('key', 1);
+    document.querySelector('.notification').setAttribute('user-id', 1);
+    console.log(document.querySelector('.notification').getAttribute('user-id'));
 }
 
 function inputChanged(e) {
