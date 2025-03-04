@@ -238,7 +238,7 @@ input.error {
 }
 
 .cover_hidden {
-  /*display: none;*/
+  display: none;
 }
 
 .popup {
