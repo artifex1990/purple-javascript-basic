@@ -79,10 +79,9 @@ function rerenderContent(activeHabbit) {
             </button>`;
         page.content.daysContainer.appendChild(element);
     }
-    
+
     page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
 }
-
 
 function rerender(activeHabbitId) {
     const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId);
@@ -95,6 +94,13 @@ function rerender(activeHabbitId) {
     rerenderHead(activeHabbit);
     rerenderContent(activeHabbit);
 }
+
+function addDays(event) {
+    event.preventDefault();
+
+    const data = new FormData(event.target);
+    console.log(data.get('comment'));
+} 
 
 /* init */
 (() => {
